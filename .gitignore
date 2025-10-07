@@ -1,0 +1,126 @@
+# -----------------------------
+# Python
+# -----------------------------
+__pycache__/
+*.py[cod]
+*.pyd
+*.pyo
+*.so
+*.egg
+*.egg-info/
+.eggs/
+build/
+dist/
+pip-wheel-metadata/
+.pytest_cache/
+.coverage*
+htmlcov/
+.mypy_cache/
+.pyre/
+.pytype/
+.cache/
+
+# -----------------------------
+# Notebooks
+# -----------------------------
+.ipynb_checkpoints/
+
+# -----------------------------
+# Virtual envs & secrets
+# -----------------------------
+.env
+.env.*
+.venv/
+venv/
+ENV/
+env/
+.conda/
+*.envrc
+
+# -----------------------------
+# OS / Editor junk
+# -----------------------------
+.DS_Store
+Thumbs.db
+Icon?
+.Spotlight-V100
+.Trashes
+.vscode/
+.idea/
+*.code-workspace
+
+# -----------------------------
+# Logs & temp
+# -----------------------------
+logs/
+*.log
+tmp/
+temp/
+*.tmp
+
+# -----------------------------
+# Binary model/artifact formats
+# -----------------------------
+# (common ML weights/checkpoints)
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.pb
+*.tflite
+*.h5
+*.weights
+
+# Keep config/metadata in models, ignore heavy artifacts by default
+models/**
+!models/**/
+!models/*.md
+!models/*.txt
+!models/**/*.json
+!models/**/*.yml
+!models/**/*.yaml
+!models/**/*.cfg
+
+# -----------------------------
+# Project-specific datasets
+# -----------------------------
+# Ignore raw dataset contents (images/labels) — track only metadata/configs.
+# Adjust to your needs if you want labels versioned.
+
+# Generic image globs (protects you outside data/ too)
+*.jpg
+*.jpeg
+*.png
+*.bmp
+*.gif
+*.tif
+*.tiff
+*.webp
+
+# COCO & YOLO trees
+data/raw/**/images/**
+data/raw/**/labels/**
+
+# But keep split/config files (e.g., YOLO .yaml, COCO JSON, small notes)
+!data/raw/**/
+!data/raw/**/*.yaml
+!data/raw/**/*.yml
+!data/raw/**/*.json
+!data/raw/**/*.md
+!data/raw/**/*.txt
+
+# Optionally keep README markers so empty dirs exist
+!data/README.md
+!data/raw/README.md
+!data/raw/coco/README.md
+!data/raw/yolo/README.md
+!data/raw/yolo/train/README.md
+!data/raw/yolo/validation/README.md
+!data/raw/yolo/test/README.md
+
+# -----------------------------
+# Byte-compiled caches anywhere
+# -----------------------------
+**/__pycache__/
+
+data/
